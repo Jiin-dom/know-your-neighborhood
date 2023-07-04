@@ -1,0 +1,237 @@
+@charset "ISO-8859-1";
+*{
+	font-family: "Lexend", "sans-serif";
+}
+
+.hero2{
+  background-color: #F8F1F1;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loginFormOuter{
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  /* margin-top: 5%; */
+}
+.loginImg{
+  width: 97px;
+  height: 97px;
+  margin-bottom: -12%;
+  z-index: 1;
+}
+#form-boxLogin{
+  width: 400px;
+  padding: 30px 40px;
+  border-radius: 10px;
+  background-color: #ffff;
+  position: relative;
+
+}
+.forgotpw{
+  text-decoration: none;
+  font-size: 12px;
+}
+.underInputs{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.unauthenticated{
+  padding:0;
+  margin: 0;
+}
+.loggedInAsDiv{
+	width: 200px;
+	  padding:0;
+  margin: 0;
+  margin-top: 3%;
+}
+.loggedInAsP{
+	font-size: 24px;
+	text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.hero{
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(/images/carsbg1.jpg);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#form-boxLogin{
+    width: 370px;
+    /* height: 0px; */
+/*     margin: 6% auto; */
+    background: #fff;
+    padding: 5px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.input-groupRegister{
+  display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+#loginbtn, #registerbtn{
+
+    width: 280px;
+    padding: 10px 30px;
+cursor: pointer;
+background-color: #FFD369;
+border: 0;
+border-radius:10px;
+color: #121212;
+font-weight: 500;
+transition: 0.3s;
+}
+#loginbtn{
+    margin-bottom: 20px;
+}
+#loginformhead{
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+#registerbtn:hover {
+    background-color: #121212;
+    color: #efefef;
+    transition: 0.3s;
+}
+#loginbtn:hover {
+    background-color: #121212;
+    color: #efefef;
+    transition: 0.3s;
+}
+.backtohome{
+    text-decoration: none;
+    position:absolute;
+    bottom: 100;
+}
+
+
+#form-boxRegister{
+  width: 370px;
+  height: 650px;
+  /* position: relative; */
+  margin: 3% auto;
+  background: #fff;
+  padding: 5px;
+  /* overflow: hidden; */
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.inputgroup1{
+  display: flex;
+  flex-direction: column;
+}
+/* #form-box{
+  width: 370px;
+
+  margin: 6% auto;
+  background: #fff;
+  padding: 5px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+} */
+
+.or{
+  display:flex;
+  flex-direction:row;
+  justify-content:space-between ;
+}
+
+.loginhr{
+  width:120px;
+}
+.bi-facebook{
+  color:#3b5998 ;
+}
+#facebookbtn{
+  border:1px solid #121212;
+  margin-bottom: 30px;
+  margin-left: 30px;
+  width:275px;
+  color: #121212;
+  padding: 10px 30px;
+  border-radius:10px;
+}
+#facebookbtn:hover{
+	background-color:#3b5998;
+	border:1px solid #3b5998;
+	color:#efefef;
+		.bi-facebook{
+	  color:#efefef ;
+	}
+}
+
+#logoutbtn{
+  /* border:1px solid #ffc214; */
+  margin-bottom: 30px;
+  margin-top: 20px;
+  width:300px;
+  color: #121212;
+  background-color:#ffc214;
+    padding: 10px 30px;
+    border-radius:10px;
+}
+#logoutbtn:hover{
+
+  color: #efefef;
+  background-color:#121212;
+}
+
+.loggedInAs{
+	margin-top: 30px;
+	font-size: 2.4rem;
+	color: #121212;
+}
+#user{
+	
+	color: #ffc214;
+}
+.loggedinasCont{
+	text-align: center;
+} 
+
+.heroInner{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

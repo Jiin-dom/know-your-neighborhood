@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>KYN</title>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width" />
+<base href="/" />
+<link rel="stylesheet" type="text/css"
+	href="/webjars/bootstrap/css/bootstrap.min.css" />
+<script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
+<script type="text/javascript"
+	src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="/css/login.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="loginCont">
+	<div class="container unauthenticated">
+   		<a href="/login"> <button class="btn facebookbtn" id="facebookbtn"><i class="bi bi-facebook"></i> Login With Facebook</button></a>
+	</div>
+	<div class="container authenticated">
+		<div class="innerAuthenticated">
+			<p class="loggedInAs">Logged in as:<br>
+	    	<span id="user" class="loggedInAsSpan"></span>
+	    	</p>
+		</div>
+	    
+	    <a href="http://localhost:3000/home"> <button class="btn homepagebtn" id="logoutbtn">Homepage</button></a>
+	     <!-- <a href="/logout"> <button class="btn homepagebtn" id="logoutbtn">Homepage</button></a> -->
+    </div>
+    
+</div>
+
+<script type="text/javascript">
+    $.get("/user", function(data) {
+        $("#user").html(data.userAuthentication.details.name);
+        $(".unauthenticated").hide()
+        $(".authenticated").show()
+    });
+
+</script>
+<!-- <div class="hero">
+<img src="/images/loginTop.png" alt="" class='loginImg'/>
+         <div class="form-box" id="form-boxLogin">
+         <div class="heroInner">
+          <img src="/images/loginTop.png" alt="" class='loginImg'/>
+         	<div class="container unauthenticated" id="form-boxLogin">
+         	 
+         	<h3 class="loginformhead mt-3" id="loginformhead">Login</h3>
+              <form id="login input-group" class=" inputgroup1 was-validated" onSubmit={this.loginChecking}>
+                  <input type="text" class="input-field mb-3" placeholder="Username" name="username" id="userName" />
+                  <input type="password" class="input-field mb-3"  placeholder="Enter Password" name="password" id="password" />
+                  <div>
+                      <button type="submit" name="loginForm" class="loginbtn mt-4" id="loginbtn">Sign in</button>
+                  </div>
+                  <div class="or">
+                      <hr class="loginhr"></hr>
+                      <p class="or text-muted">or</p>
+                      <hr class="loginhr"></hr>
+                  </div>
+                  
+              </form>
+              
+         		<div class="container unauthenticated">
+                		<a href="/login"> <button class="btn facebookbtn" id="facebookbtn"><i class="bi bi-facebook"></i> Login With Facebook</button></a>
+             	</div>
+             </div>
+             <div class="container authenticated loggedinasCont" style="display:none" id="form-boxLogin" >
+                 <p class="loggedInAs">Logged in as: <br>
+                 <span id="user"></span></p>
+                 <a href="/logout"> <button class="btn facebookbtn" id="logoutbtn">Logout</button></a>
+             </div>
+         </div>
+     </div>
+	<script type="text/javascript">
+    $.get("/user", function(data) {
+        $("#user").html(data.userAuthentication.details.name);
+        $(".unauthenticated").hide()
+        $(".authenticated").show()
+    });
+
+</script> -->
+
+<!--  <div class="hero2">
+        <div class='loginFormOuter'>
+            <img src="/images/loginTop.png" alt="" class='loginImg'/>
+            <div class="form-box shadow " id="form-boxLogin">
+                <div class="container authenticated" style="display: none">
+					<div class="loggedInAsDiv">
+						<p class="loggedInAsP">Logged in as: <p>
+						<span  class="loggedInAsSpan" id="user"></span>
+					</div>
+					<a href="http://localhost:3000/home"><button class="btn">Homepage</button></a>
+				</div>
+                <div class=' container unauthenticated'>
+					<form  onSubmit={handleLogin}>
+	                    <div class="mb-3 mt-3">
+	                        <label for="username" class="form-label">Email address</label>
+	                        <input  value={username} onChange={(e) => setUsername(e.target.value)} type="text" className="form-control input-field" id="username" aria-describedby="emailHelp"/>
+	                        
+	                    </div>
+	                    <div class="mb-3">
+	                        <label for="passwrd" class="form-label">Password</label>
+	                        <input value={password} onChange={(e) => setPassword(e.target.value)} type="password" className="form-control input-field" id="password"/>
+	                    </div>
+	                    <div class='underInputs mb-3 form-check'>
+	                        <div>
+	                            <input type="checkbox" class="form-check-input me-2" id="exampleCheck1"/>
+	                            <label class="form-check-label exampleCheck1label" class='exampleCheck1label' for="exampleCheck1 " id="">Remember Me</label>
+	                        </div>
+	                        <a href="/#" class='forgotpw text-muted'>Forgot Password?</a>
+	                        
+	                    </div>
+	                    <button type="submit" class="btn loginBtn" id='loginBtn' onClick={handleLogin}>Log in</button>
+	                </form>
+                </div>
+                
+            </div>
+        </div>
+
+    </div>
+	<h1>Demo</h1>
+
+	<div class="container unauthenticated">
+		Login With Facebook: <a href="/login">click here</a>
+	</div>
+	<div class="container authenticated" style="display: none">
+		Logged in as: <span id="user"></span>
+	</div>
+	<script type="text/javascript">
+    $.get("/user", function(data) {
+        $("#user").html(data.userAuthentication.details.name);
+        $(".unauthenticated").hide()
+        $(".authenticated").show()
+    });
+
+</script> -->
+</body>
+</html>
